@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2553a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DDChosoeAddressViewController">
+            <connections>
+                <outlet property="addressLabel" destination="JXU-56-GDm" id="6a0-pF-hi3"/>
+                <outlet property="confirmAddressButton" destination="PWc-5x-Qme" id="xhZ-Ik-qqC"/>
+                <outlet property="headerView" destination="Dqx-44-fsq" id="TsX-eB-jNm"/>
+                <outlet property="mapView" destination="ZUu-UQ-zzN" id="Eh6-la-iXz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dqx-44-fsq" customClass="DDHeaderView">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="tVA-eN-3LW"/>
+                    </constraints>
+                </view>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZUu-UQ-zzN"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-0k-hMv" userLabel="Divider 2">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="RVl-k7-kAM"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXU-56-GDm" userLabel="Address">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="8x3-KT-9SN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.69796198610000004" green="0.69808381799999997" blue="0.69795435669999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWc-5x-Qme">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="odj-JN-Yze"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                    <state key="normal" title="Confirm Address"/>
+                    <connections>
+                        <action selector="confirmAddressButtonTapped:" destination="-1" eventType="touchUpInside" id="Zie-aJ-GqK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ZUu-UQ-zzN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7d9-aZ-D1S"/>
+                <constraint firstItem="PWc-5x-Qme" firstAttribute="top" secondItem="JXU-56-GDm" secondAttribute="bottom" id="Egw-H4-dT0"/>
+                <constraint firstAttribute="trailing" secondItem="ZUu-UQ-zzN" secondAttribute="trailing" id="FAX-Fj-ufJ"/>
+                <constraint firstItem="JXU-56-GDm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Nq1-rU-INK"/>
+                <constraint firstItem="MCk-0k-hMv" firstAttribute="top" secondItem="ZUu-UQ-zzN" secondAttribute="bottom" id="QTX-7y-pgB"/>
+                <constraint firstAttribute="trailing" secondItem="JXU-56-GDm" secondAttribute="trailing" id="cPz-Ca-ReU"/>
+                <constraint firstAttribute="bottom" secondItem="PWc-5x-Qme" secondAttribute="bottom" id="dcY-L9-o79"/>
+                <constraint firstItem="Dqx-44-fsq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fXq-KH-h3F"/>
+                <constraint firstItem="ZUu-UQ-zzN" firstAttribute="top" secondItem="Dqx-44-fsq" secondAttribute="bottom" id="jpN-z2-ORI"/>
+                <constraint firstAttribute="trailing" secondItem="PWc-5x-Qme" secondAttribute="trailing" id="oKq-g8-12i"/>
+                <constraint firstItem="MCk-0k-hMv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uaL-po-5Gf"/>
+                <constraint firstAttribute="trailing" secondItem="MCk-0k-hMv" secondAttribute="trailing" id="uaQ-uB-3RU"/>
+                <constraint firstItem="PWc-5x-Qme" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vkk-xk-Hkh"/>
+                <constraint firstItem="Dqx-44-fsq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xPG-ya-H9P"/>
+                <constraint firstAttribute="trailing" secondItem="Dqx-44-fsq" secondAttribute="trailing" id="y9v-P6-PxS"/>
+                <constraint firstItem="JXU-56-GDm" firstAttribute="top" secondItem="MCk-0k-hMv" secondAttribute="bottom" id="ysh-fr-HIp"/>
+            </constraints>
+            <point key="canvasLocation" x="-177" y="45"/>
+        </view>
+    </objects>
+</document>

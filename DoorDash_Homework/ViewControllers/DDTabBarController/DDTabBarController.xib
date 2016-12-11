@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2553a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11201"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DDTabBarController">
+            <connections>
+                <outlet property="containerView" destination="BBe-aX-XCD" id="rZf-Gy-1fO"/>
+                <outlet property="tabBar" destination="lQE-KE-gIF" id="zzF-CI-cd1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBe-aX-XCD" userLabel="Container ">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQE-KE-gIF" userLabel="Tab Bar" customClass="DDTabBar">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="OAK-ff-MzV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="BBe-aX-XCD" secondAttribute="trailing" id="1ob-47-zfg"/>
+                <constraint firstItem="lQE-KE-gIF" firstAttribute="top" secondItem="BBe-aX-XCD" secondAttribute="bottom" id="9iv-QW-d6z"/>
+                <constraint firstItem="lQE-KE-gIF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="A28-nX-4Zf"/>
+                <constraint firstAttribute="bottom" secondItem="lQE-KE-gIF" secondAttribute="bottom" id="jxH-zO-cB7"/>
+                <constraint firstItem="BBe-aX-XCD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="seS-ih-eUa"/>
+                <constraint firstItem="BBe-aX-XCD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="v7D-h9-Ppr"/>
+                <constraint firstAttribute="trailing" secondItem="lQE-KE-gIF" secondAttribute="trailing" id="w8A-3k-owt"/>
+            </constraints>
+            <point key="canvasLocation" x="-93.5" y="33.5"/>
+        </view>
+    </objects>
+</document>

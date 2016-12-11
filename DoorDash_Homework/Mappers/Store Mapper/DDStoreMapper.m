@@ -99,7 +99,8 @@
 + (NSInteger)getMinimumDeliveryTimeFromData:(NSDictionary * _Nonnull)data {
     NSNumber *minimumDeliveryTime = [data objectForKey:kMinimumDeliveryTimeKey];
     
-    if ([minimumDeliveryTime integerValue] <= 0) {
+    if ([minimumDeliveryTime isKindOfClass:[NSNull class]] ||
+        [minimumDeliveryTime integerValue] <= 0) {
         NSLog(@"WARING: Minimum Delivery Time is invalid");
         return kInvalidMinimumDeliveryTime;
     }
