@@ -11,6 +11,11 @@
 #import "DDConstants.h"
 #import "DDStore.h"
 
+/**
+ * To optimize performance, we could parse this in it's own queue, and then pass the result back to the
+ * caller via a block. This way, all the stores can be parsed in their own queue in parallel.
+ */
+
 @implementation DDStoreMapper
 
 + (DDStore * _Nonnull)storeFromData:(NSDictionary * _Nonnull)data {

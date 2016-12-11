@@ -17,6 +17,11 @@
 
 @end
 
+/**
+ * To optimize performance, we could parse this in it's own queue, and then pass the result back to the
+ * caller via a block. This way, all the menus can be parsed in their own queue in parallel.
+ */
+
 @implementation DDRestaurantMenuMapper
 
 + (DDRestaurantMenu * _Nonnull)restaurantMenuFromData:(NSDictionary * _Nonnull)data {

@@ -17,6 +17,9 @@
 		1157B5261DFCE85E00005698 /* DDRestaurantMenuMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157B5251DFCE85E00005698 /* DDRestaurantMenuMapper.m */; };
 		1157B52D1DFCEAF200005698 /* DDRestaurantMenuCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157B52C1DFCEAF200005698 /* DDRestaurantMenuCategory.m */; };
 		1157B5301DFCEB6F00005698 /* DDRestaurantMenuCategoryMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157B52F1DFCEB6F00005698 /* DDRestaurantMenuCategoryMapper.m */; };
+		1157B5351DFD047200005698 /* DDRestaurantMenuMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157B5341DFD047200005698 /* DDRestaurantMenuMapperTests.m */; };
+		1157B5371DFD05D300005698 /* DDRestaurantMenuCategoryMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157B5361DFD05D300005698 /* DDRestaurantMenuCategoryMapperTests.m */; };
+		1157B5391DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h in Sources */ = {isa = PBXBuildFile; fileRef = 1157B5381DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h */; };
 		117FE60C1DFC9107009D4740 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE60B1DFC9107009D4740 /* main.m */; };
 		117FE60F1DFC9107009D4740 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE60E1DFC9107009D4740 /* AppDelegate.m */; };
 		117FE6181DFC9107009D4740 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117FE6161DFC9107009D4740 /* Main.storyboard */; };
@@ -66,6 +69,9 @@
 		1157B52C1DFCEAF200005698 /* DDRestaurantMenuCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRestaurantMenuCategory.m; sourceTree = "<group>"; };
 		1157B52E1DFCEB6F00005698 /* DDRestaurantMenuCategoryMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRestaurantMenuCategoryMapper.h; sourceTree = "<group>"; };
 		1157B52F1DFCEB6F00005698 /* DDRestaurantMenuCategoryMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRestaurantMenuCategoryMapper.m; sourceTree = "<group>"; };
+		1157B5341DFD047200005698 /* DDRestaurantMenuMapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRestaurantMenuMapperTests.m; sourceTree = "<group>"; };
+		1157B5361DFD05D300005698 /* DDRestaurantMenuCategoryMapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRestaurantMenuCategoryMapperTests.m; sourceTree = "<group>"; };
+		1157B5381DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRestaurantMenuCategoryMapperTests.h; sourceTree = "<group>"; };
 		117FE6071DFC9107009D4740 /* DoorDash_Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDash_Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117FE60B1DFC9107009D4740 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		117FE60D1DFC9107009D4740 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -279,6 +285,9 @@
 			children = (
 				117FE6291DFC9108009D4740 /* Info.plist */,
 				1157B51F1DFCD79100005698 /* DDStoreMapperTests.m */,
+				1157B5341DFD047200005698 /* DDRestaurantMenuMapperTests.m */,
+				1157B5381DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h */,
+				1157B5361DFD05D300005698 /* DDRestaurantMenuCategoryMapperTests.m */,
 			);
 			path = DoorDash_HomeworkTests;
 			sourceTree = "<group>";
@@ -529,6 +538,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1157B5201DFCD79100005698 /* DDStoreMapperTests.m in Sources */,
+				1157B5391DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h in Sources */,
+				1157B5351DFD047200005698 /* DDRestaurantMenuMapperTests.m in Sources */,
+				1157B5371DFD05D300005698 /* DDRestaurantMenuCategoryMapperTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

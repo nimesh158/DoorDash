@@ -10,6 +10,8 @@
 
 #import "DDConstants.h"
 #import "DDAPIClient.h"
+#import "DDRestaurantMenu.h"
+#import "DDRestaurantMenuMapper.h"
 
 static NSString * const kDDErrorDomain = @"com.doordash.homework.restaurant.menu";
 
@@ -88,17 +90,25 @@ static NSString * const kDDErrorDomain = @"com.doordash.homework.restaurant.menu
                       failure:(DDrestaurantMenuSearchFailure)failure {
     
     if ([responseObject isKindOfClass:[NSDictionary class]]) {
+        DDRestaurantMenu *menu = [DDRestaurantMenuMapper restaurantMenuFromData:responseObject];
         dispatch_async(dispatch_get_main_queue(), ^{
             if (success != nil) {
-                success(responseObject);
+                success(menu);
             }
         });
     } else if ([responseObject isKindOfClass:[NSArray class]]) {
-        NSMutableArray *data = [NSMutableArray arrayWithCapacity:[responseObject count]];
-        [data addObject:responseObject];
+        NSMutableArray *restaurantMenus = [NSMutableArray arrayWithCapacity:[responseObject count]];
+        
+        for (NSDictionary *data in responseObject) {
+            DDRestaurantMenu *menu = [DDRestaurantMenuMapper restaurantMenuFromData:data];
+            if (menu) {
+                [restaurantMenus addObject:menu];
+            }
+        }
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             if (success != nil) {
-                success(data);
+                success(restaurantMenus);
             }
         });
     } else {

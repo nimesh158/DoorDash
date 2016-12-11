@@ -63,7 +63,7 @@ static NSInteger    const kMinimumDeliveryTime = 49;
     XCTAssertEqual(store.storeID, kStoreID);
 }
 
-- (void)testParsingOfStoreIdWhenInValid {
+- (void)testParsingOfStoreIdWhenInvalid {
     NSDictionary *data = [self createTestDataWithId:0
                                           storeName:kStoreNameKey
                                    storeDescription:kStoreDescriptionKey
@@ -89,7 +89,7 @@ static NSInteger    const kMinimumDeliveryTime = 49;
     XCTAssertEqual(store.storeName, kStoreNameKey);
 }
 
-- (void)testParsingOfStoreNameWhenInValid {
+- (void)testParsingOfStoreNameWhenInvalid {
     NSDictionary *data = [self createTestDataWithId:kStoreID
                                           storeName:nil
                                    storeDescription:kStoreDescriptionKey
@@ -115,7 +115,7 @@ static NSInteger    const kMinimumDeliveryTime = 49;
     XCTAssertEqual(store.storeDescription, kStoreDescriptionKey);
 }
 
-- (void)testParsingOfStoreDescriptionWhenInValid {
+- (void)testParsingOfStoreDescriptionWhenInvalid {
     NSDictionary *data = [self createTestDataWithId:kStoreID
                                           storeName:kStoreNameKey
                                    storeDescription:nil
@@ -141,7 +141,7 @@ static NSInteger    const kMinimumDeliveryTime = 49;
     XCTAssertEqual(store.deliveryFee, kStoreDeliveryFee/100.0);
 }
 
-- (void)testParsingOfDeliveryFeeWhenInValid {
+- (void)testParsingOfDeliveryFeeWhenInvalid {
     NSDictionary *data = [self createTestDataWithId:kStoreID
                                           storeName:kStoreNameKey
                                    storeDescription:kStoreDescriptionKey
@@ -167,7 +167,7 @@ static NSInteger    const kMinimumDeliveryTime = 49;
     XCTAssertEqual(store.storeImageURL, kStoreImageURL);
 }
 
-- (void)testParsingOfImageURLWhenInValid {
+- (void)testParsingOfImageURLWhenInvalid {
     NSDictionary *data = [self createTestDataWithId:kStoreID
                                           storeName:kStoreNameKey
                                    storeDescription:kStoreDescriptionKey
@@ -193,7 +193,7 @@ static NSInteger    const kMinimumDeliveryTime = 49;
     XCTAssertEqual(store.minimumDeliveryTime, kMinimumDeliveryTime);
 }
 
-- (void)testParsingOfMinimumDeliveryTimeWhenInValid {
+- (void)testParsingOfMinimumDeliveryTimeWhenInvalid {
     NSDictionary *data = [self createTestDataWithId:kStoreID
                                           storeName:kStoreNameKey
                                    storeDescription:kStoreDescriptionKey
