@@ -18,4 +18,6 @@
 
 - (void)updateCellWithStoreDeliveryTimeEstimate:(NSString *)storeDeliveryTime;
 
+- (void)updateCellWithStoreImage:(UIImage *)image;
+
 @end

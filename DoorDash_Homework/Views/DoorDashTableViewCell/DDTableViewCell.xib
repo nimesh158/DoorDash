@@ -16,6 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Obi-sv-WBo">
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="105" id="Yvz-jF-hEl"/>
                         </constraints>
@@ -52,9 +53,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nHr-fr-39a" firstAttribute="top" secondItem="53y-ly-9I5" secondAttribute="bottom" constant="4" id="026-W5-Q6n"/>
+                            <constraint firstItem="nHr-fr-39a" firstAttribute="top" secondItem="53y-ly-9I5" secondAttribute="bottom" constant="2" id="026-W5-Q6n"/>
                             <constraint firstAttribute="trailing" secondItem="53y-ly-9I5" secondAttribute="trailing" constant="18" id="1A2-ZF-jc7"/>
                             <constraint firstAttribute="trailing" secondItem="nJ6-rO-Dvr" secondAttribute="trailing" constant="15" id="6zQ-70-fPp"/>
                             <constraint firstAttribute="bottom" secondItem="nHr-fr-39a" secondAttribute="bottom" constant="10" id="7F1-oG-t9i"/>
@@ -69,6 +70,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="Knk-zl-IPh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="F77-sk-E3d"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Obi-sv-WBo" secondAttribute="bottom" constant="5" id="TJv-1C-Y4y"/>
@@ -86,7 +88,7 @@
                 <outlet property="storeName" destination="1Hy-78-GtN" id="cwH-No-Rbi"/>
                 <outlet property="storeType" destination="53y-ly-9I5" id="wQI-Nf-Rap"/>
             </connections>
-            <point key="canvasLocation" x="-233" y="-75"/>
+            <point key="canvasLocation" x="-590" y="-364"/>
         </tableViewCell>
     </objects>
 </document>

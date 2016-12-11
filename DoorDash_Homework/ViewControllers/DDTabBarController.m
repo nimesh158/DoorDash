@@ -11,7 +11,7 @@
 #import "DDChooseAddressViewController.h"
 #import "DDExploreTableViewController.h"
 
-@interface DDTabBarController () <DDChooseAddressViewControllerProtocol>
+@interface DDTabBarController () <DDChooseAddressViewControllerProtocol, DDExploreTableViewControllerProtocol>
 
 @property (nonatomic, assign) BOOL isLaunchingFirstTime;
 
@@ -30,7 +30,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setUpTabBarViewControllers];
+}
+
+- (void)setUpTabBarViewControllers {
+    for (UINavigationController *navigationController in self.viewControllers) {
+        DDExploreTableViewController *viewController = [[navigationController viewControllers] firstObject];
+        viewController.delegate = self;
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -39,19 +47,24 @@
     if (self.isLaunchingFirstTime) {
         self.isLaunchingFirstTime = NO;
         
-        DDChooseAddressViewController *chooseAddressViewController = [[DDChooseAddressViewController alloc] initWithNibName:NSStringFromClass([DDChooseAddressViewController class])
-                                                                                                                     bundle:[NSBundle mainBundle]];
-        chooseAddressViewController.delegate = self;
-        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:chooseAddressViewController];
-        [self presentViewController:navigationController
-                           animated:YES
-                         completion:nil];
+        [self showChooseAddressViewController];
     }
 }
 
-#pragma mark - DDChooseAddressViewControllerProtocol Conformation
+- (void)showChooseAddressViewController {
+    DDChooseAddressViewController *chooseAddressViewController = [[DDChooseAddressViewController alloc] initWithNibName:NSStringFromClass([DDChooseAddressViewController class])
+                                                                                                                 bundle:[NSBundle mainBundle]];
+    chooseAddressViewController.delegate = self;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:chooseAddressViewController];
+    [self presentViewController:navigationController
+                       animated:YES
+                     completion:nil];
+}
+
+#pragma mark - DDChooseAddressViewControllerProtocol conformance
 - (void)didTapConfirmAddressButtonForAddress:(CLLocationCoordinate2D)address {
-    DDExploreTableViewController *exploreTableViewController = [[[self.viewControllers firstObject] viewControllers] firstObject]; //embedded inside a navigation controller
+    NSInteger selectedTab = self.selectedIndex;
+    DDExploreTableViewController *exploreTableViewController = [[self.viewControllers[selectedTab] viewControllers] firstObject]; //embedded inside a navigation controller
     if (exploreTableViewController) {
         [exploreTableViewController updateControllerForLatitude:address.latitude
                                                       longitude:address.longitude];
@@ -59,6 +72,15 @@
     
     [self dismissViewControllerAnimated:YES
                              completion:nil];
+}
+
+#pragma mark - DDExploreTableViewControllerProtocol conformance
+- (void)didTapShowMaputton {
+    [self showChooseAddressViewController];
+}
+
+- (void)didTapSearchButton {
+    
 }
 
 @end

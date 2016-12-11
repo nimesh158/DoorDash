@@ -43,4 +43,8 @@
     [self.storeDeliveryTimeEstimate setText:storeDeliveryTime];
 }
 
+- (void)updateCellWithStoreImage:(UIImage *)image {
+    [self.storeImageView setImage:image];
+}
+
 @end

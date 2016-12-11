@@ -8,9 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DDExploreTableViewControllerProtocol <NSObject>
+
+- (void)didTapShowMaputton;
+
+- (void)didTapSearchButton;
+
+@end
+
 @interface DDExploreTableViewController : UITableViewController
+
+@property (nonatomic, assign, readwrite) id <DDExploreTableViewControllerProtocol> delegate;
 
 - (void)updateControllerForLatitude:(CGFloat)latitude
                           longitude:(CGFloat)longitude;
+
+- (NSArray *)getDataSource;
+
+- (void)updateDataSource:(NSArray *)newDataSource;
 
 @end
