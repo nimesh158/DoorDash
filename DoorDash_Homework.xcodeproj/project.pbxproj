@@ -7,14 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		111BFC5F1DFD30D9007F28EC /* DDHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 111BFC5E1DFD30D9007F28EC /* DDHeaderView.m */; };
-		111BFC611DFD30F0007F28EC /* DDHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 111BFC601DFD30F0007F28EC /* DDHeaderView.xib */; };
-		111BFC671DFD3C37007F28EC /* DDChosoeAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 111BFC641DFD3C37007F28EC /* DDChosoeAddressViewController.m */; };
-		111BFC681DFD3C37007F28EC /* DDChosoeAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 111BFC651DFD3C37007F28EC /* DDChosoeAddressViewController.xib */; };
-		111BFC6C1DFD3C50007F28EC /* DDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 111BFC6A1DFD3C50007F28EC /* DDTabBarController.m */; };
-		111BFC6D1DFD3C50007F28EC /* DDTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 111BFC6B1DFD3C50007F28EC /* DDTabBarController.xib */; };
-		111BFC701DFD3D7A007F28EC /* DDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 111BFC6F1DFD3D7A007F28EC /* DDTabBar.m */; };
-		111BFC721DFD3D87007F28EC /* DDTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 111BFC711DFD3D87007F28EC /* DDTabBar.xib */; };
+		111BFC671DFD3C37007F28EC /* DDChooseAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 111BFC641DFD3C37007F28EC /* DDChooseAddressViewController.m */; };
+		111BFC681DFD3C37007F28EC /* DDChooseAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 111BFC651DFD3C37007F28EC /* DDChooseAddressViewController.xib */; };
 		111BFC741DFD436F007F28EC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111BFC731DFD436F007F28EC /* MapKit.framework */; };
 		1139480A1DFCA76A00662712 /* DDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 113948091DFCA76A00662712 /* DDConstants.m */; };
 		1139480F1DFCA9DD00662712 /* DDStoreSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139480E1DFCA9DD00662712 /* DDStoreSearch.m */; };
@@ -30,9 +24,14 @@
 		1157B5371DFD05D300005698 /* DDRestaurantMenuCategoryMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157B5361DFD05D300005698 /* DDRestaurantMenuCategoryMapperTests.m */; };
 		1157B5391DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h in Sources */ = {isa = PBXBuildFile; fileRef = 1157B5381DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h */; };
 		1157B53D1DFD1AF800005698 /* DDFavoriteStoresManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157B53C1DFD1AF800005698 /* DDFavoriteStoresManager.m */; };
+		117D60BB1DFDD5C1002CA482 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117D60BA1DFDD5C1002CA482 /* Main.storyboard */; };
+		117D60C01DFDE17E002CA482 /* DDExploreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D60BE1DFDE17E002CA482 /* DDExploreTableViewController.m */; };
+		117D60C11DFDE17E002CA482 /* DDExploreTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117D60BF1DFDE17E002CA482 /* DDExploreTableViewController.xib */; };
+		117D60C41DFDE4E5002CA482 /* DDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D60C31DFDE4E5002CA482 /* DDTabBarController.m */; };
+		117D60CA1DFDF275002CA482 /* DDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D60C81DFDF275002CA482 /* DDTableViewCell.m */; };
+		117D60CB1DFDF275002CA482 /* DDTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117D60C91DFDF275002CA482 /* DDTableViewCell.xib */; };
 		117FE60C1DFC9107009D4740 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE60B1DFC9107009D4740 /* main.m */; };
 		117FE60F1DFC9107009D4740 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE60E1DFC9107009D4740 /* AppDelegate.m */; };
-		117FE6181DFC9107009D4740 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117FE6161DFC9107009D4740 /* Main.storyboard */; };
 		117FE61A1DFC9108009D4740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117FE6191DFC9108009D4740 /* Assets.xcassets */; };
 		117FE6331DFC9108009D4740 /* DoorDash_HomeworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE6321DFC9108009D4740 /* DoorDash_HomeworkUITests.m */; };
 		117FE64A1DFC92A0009D4740 /* DDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE6491DFC92A0009D4740 /* DDAPIClient.m */; };
@@ -57,18 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		111BFC5D1DFD30D9007F28EC /* DDHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHeaderView.h; sourceTree = "<group>"; };
-		111BFC5E1DFD30D9007F28EC /* DDHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHeaderView.m; sourceTree = "<group>"; };
-		111BFC601DFD30F0007F28EC /* DDHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDHeaderView.xib; sourceTree = "<group>"; };
-		111BFC631DFD3C37007F28EC /* DDChosoeAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDChosoeAddressViewController.h; sourceTree = "<group>"; };
-		111BFC641DFD3C37007F28EC /* DDChosoeAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDChosoeAddressViewController.m; sourceTree = "<group>"; };
-		111BFC651DFD3C37007F28EC /* DDChosoeAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDChosoeAddressViewController.xib; sourceTree = "<group>"; };
-		111BFC691DFD3C50007F28EC /* DDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTabBarController.h; sourceTree = "<group>"; };
-		111BFC6A1DFD3C50007F28EC /* DDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTabBarController.m; sourceTree = "<group>"; };
-		111BFC6B1DFD3C50007F28EC /* DDTabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDTabBarController.xib; sourceTree = "<group>"; };
-		111BFC6E1DFD3D7A007F28EC /* DDTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTabBar.h; sourceTree = "<group>"; };
-		111BFC6F1DFD3D7A007F28EC /* DDTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTabBar.m; sourceTree = "<group>"; };
-		111BFC711DFD3D87007F28EC /* DDTabBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDTabBar.xib; sourceTree = "<group>"; };
+		111BFC631DFD3C37007F28EC /* DDChooseAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDChooseAddressViewController.h; sourceTree = "<group>"; };
+		111BFC641DFD3C37007F28EC /* DDChooseAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDChooseAddressViewController.m; sourceTree = "<group>"; };
+		111BFC651DFD3C37007F28EC /* DDChooseAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDChooseAddressViewController.xib; sourceTree = "<group>"; };
 		111BFC731DFD436F007F28EC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		113948081DFCA76A00662712 /* DDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDConstants.h; sourceTree = "<group>"; };
 		113948091DFCA76A00662712 /* DDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDConstants.m; sourceTree = "<group>"; };
@@ -94,11 +84,19 @@
 		1157B5381DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRestaurantMenuCategoryMapperTests.h; sourceTree = "<group>"; };
 		1157B53B1DFD1AF800005698 /* DDFavoriteStoresManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFavoriteStoresManager.h; sourceTree = "<group>"; };
 		1157B53C1DFD1AF800005698 /* DDFavoriteStoresManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFavoriteStoresManager.m; sourceTree = "<group>"; };
+		117D60BA1DFDD5C1002CA482 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
+		117D60BD1DFDE17E002CA482 /* DDExploreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDExploreTableViewController.h; sourceTree = "<group>"; };
+		117D60BE1DFDE17E002CA482 /* DDExploreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDExploreTableViewController.m; sourceTree = "<group>"; };
+		117D60BF1DFDE17E002CA482 /* DDExploreTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDExploreTableViewController.xib; sourceTree = "<group>"; };
+		117D60C21DFDE4E5002CA482 /* DDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTabBarController.h; sourceTree = "<group>"; };
+		117D60C31DFDE4E5002CA482 /* DDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTabBarController.m; sourceTree = "<group>"; };
+		117D60C71DFDF275002CA482 /* DDTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTableViewCell.h; sourceTree = "<group>"; };
+		117D60C81DFDF275002CA482 /* DDTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTableViewCell.m; sourceTree = "<group>"; };
+		117D60C91DFDF275002CA482 /* DDTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDTableViewCell.xib; sourceTree = "<group>"; };
 		117FE6071DFC9107009D4740 /* DoorDash_Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDash_Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117FE60B1DFC9107009D4740 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		117FE60D1DFC9107009D4740 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		117FE60E1DFC9107009D4740 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		117FE6171DFC9107009D4740 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		117FE6191DFC9108009D4740 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		117FE61E1DFC9108009D4740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		117FE6231DFC9108009D4740 /* DoorDash_HomeworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoorDash_HomeworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,37 +147,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		111BFC5C1DFD30C6007F28EC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				111BFC5D1DFD30D9007F28EC /* DDHeaderView.h */,
-				111BFC5E1DFD30D9007F28EC /* DDHeaderView.m */,
-				111BFC601DFD30F0007F28EC /* DDHeaderView.xib */,
-				111BFC6E1DFD3D7A007F28EC /* DDTabBar.h */,
-				111BFC6F1DFD3D7A007F28EC /* DDTabBar.m */,
-				111BFC711DFD3D87007F28EC /* DDTabBar.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		111BFC621DFD3C37007F28EC /* DDChooseAddressViewController */ = {
 			isa = PBXGroup;
 			children = (
-				111BFC631DFD3C37007F28EC /* DDChosoeAddressViewController.h */,
-				111BFC641DFD3C37007F28EC /* DDChosoeAddressViewController.m */,
-				111BFC651DFD3C37007F28EC /* DDChosoeAddressViewController.xib */,
+				111BFC631DFD3C37007F28EC /* DDChooseAddressViewController.h */,
+				111BFC641DFD3C37007F28EC /* DDChooseAddressViewController.m */,
+				111BFC651DFD3C37007F28EC /* DDChooseAddressViewController.xib */,
 			);
 			path = DDChooseAddressViewController;
-			sourceTree = "<group>";
-		};
-		111BFC661DFD3C37007F28EC /* DDTabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				111BFC691DFD3C50007F28EC /* DDTabBarController.h */,
-				111BFC6A1DFD3C50007F28EC /* DDTabBarController.m */,
-				111BFC6B1DFD3C50007F28EC /* DDTabBarController.xib */,
-			);
-			path = DDTabBarController;
 			sourceTree = "<group>";
 		};
 		1139480B1DFCA9C300662712 /* Restaurant Menu */ = {
@@ -203,7 +178,7 @@
 		113948101DFCAD2400662712 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				117FE6161DFC9107009D4740 /* Main.storyboard */,
+				117D60BA1DFDD5C1002CA482 /* Main.storyboard */,
 				117FE6191DFC9108009D4740 /* Assets.xcassets */,
 				117FE61E1DFC9108009D4740 /* Info.plist */,
 			);
@@ -293,6 +268,34 @@
 			path = "Favorite Stores";
 			sourceTree = "<group>";
 		};
+		117D60BC1DFDE15E002CA482 /* DDExploreViewController */ = {
+			isa = PBXGroup;
+			children = (
+				117D60BD1DFDE17E002CA482 /* DDExploreTableViewController.h */,
+				117D60BE1DFDE17E002CA482 /* DDExploreTableViewController.m */,
+				117D60BF1DFDE17E002CA482 /* DDExploreTableViewController.xib */,
+			);
+			path = DDExploreViewController;
+			sourceTree = "<group>";
+		};
+		117D60C51DFDF24B002CA482 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				117D60C61DFDF24B002CA482 /* DoorDashTableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		117D60C61DFDF24B002CA482 /* DoorDashTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				117D60C71DFDF275002CA482 /* DDTableViewCell.h */,
+				117D60C81DFDF275002CA482 /* DDTableViewCell.m */,
+				117D60C91DFDF275002CA482 /* DDTableViewCell.xib */,
+			);
+			path = DoorDashTableViewCell;
+			sourceTree = "<group>";
+		};
 		117FE5FE1DFC9107009D4740 = {
 			isa = PBXGroup;
 			children = (
@@ -325,7 +328,7 @@
 				1157B5131DFCD11200005698 /* Models */,
 				1157B5191DFCD11C00005698 /* Mappers */,
 				117FE6401DFC923F009D4740 /* Service */,
-				111BFC5C1DFD30C6007F28EC /* Views */,
+				117D60C51DFDF24B002CA482 /* Views */,
 				117FE6411DFC9247009D4740 /* ViewControllers */,
 				113948101DFCAD2400662712 /* Resources */,
 				117FE60A1DFC9107009D4740 /* Supporting Files */,
@@ -377,8 +380,10 @@
 		117FE6411DFC9247009D4740 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				117D60BC1DFDE15E002CA482 /* DDExploreViewController */,
 				111BFC621DFD3C37007F28EC /* DDChooseAddressViewController */,
-				111BFC661DFD3C37007F28EC /* DDTabBarController */,
+				117D60C21DFDE4E5002CA482 /* DDTabBarController.h */,
+				117D60C31DFDE4E5002CA482 /* DDTabBarController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -462,6 +467,7 @@
 				TargetAttributes = {
 					117FE6061DFC9107009D4740 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 4727BSHESM;
 						ProvisioningStyle = Automatic;
 					};
 					117FE6221DFC9108009D4740 = {
@@ -501,12 +507,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				111BFC611DFD30F0007F28EC /* DDHeaderView.xib in Resources */,
-				111BFC721DFD3D87007F28EC /* DDTabBar.xib in Resources */,
-				111BFC681DFD3C37007F28EC /* DDChosoeAddressViewController.xib in Resources */,
+				117D60C11DFDE17E002CA482 /* DDExploreTableViewController.xib in Resources */,
+				117D60BB1DFDD5C1002CA482 /* Main.storyboard in Resources */,
+				111BFC681DFD3C37007F28EC /* DDChooseAddressViewController.xib in Resources */,
 				117FE61A1DFC9108009D4740 /* Assets.xcassets in Resources */,
-				111BFC6D1DFD3C50007F28EC /* DDTabBarController.xib in Resources */,
-				117FE6181DFC9107009D4740 /* Main.storyboard in Resources */,
+				117D60CB1DFDF275002CA482 /* DDTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,22 +584,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				111BFC701DFD3D7A007F28EC /* DDTabBar.m in Sources */,
 				1139480A1DFCA76A00662712 /* DDConstants.m in Sources */,
 				1157B5301DFCEB6F00005698 /* DDRestaurantMenuCategoryMapper.m in Sources */,
 				117FE60F1DFC9107009D4740 /* AppDelegate.m in Sources */,
 				113948131DFCC24700662712 /* DDRestaurantMenuSearch.m in Sources */,
-				111BFC6C1DFD3C50007F28EC /* DDTabBarController.m in Sources */,
 				1139480F1DFCA9DD00662712 /* DDStoreSearch.m in Sources */,
 				117FE64A1DFC92A0009D4740 /* DDAPIClient.m in Sources */,
 				1157B51E1DFCD13C00005698 /* DDStoreMapper.m in Sources */,
-				111BFC671DFD3C37007F28EC /* DDChosoeAddressViewController.m in Sources */,
+				117D60C41DFDE4E5002CA482 /* DDTabBarController.m in Sources */,
+				117D60C01DFDE17E002CA482 /* DDExploreTableViewController.m in Sources */,
+				117D60CA1DFDF275002CA482 /* DDTableViewCell.m in Sources */,
+				111BFC671DFD3C37007F28EC /* DDChooseAddressViewController.m in Sources */,
 				1157B5181DFCD11200005698 /* DDStore.m in Sources */,
 				1157B52D1DFCEAF200005698 /* DDRestaurantMenuCategory.m in Sources */,
 				1157B5231DFCE73000005698 /* DDRestaurantMenu.m in Sources */,
 				1157B53D1DFD1AF800005698 /* DDFavoriteStoresManager.m in Sources */,
 				1157B5261DFCE85E00005698 /* DDRestaurantMenuMapper.m in Sources */,
-				111BFC5F1DFD30D9007F28EC /* DDHeaderView.m in Sources */,
 				117FE60C1DFC9107009D4740 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,17 +638,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		117FE6161DFC9107009D4740 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				117FE6171DFC9107009D4740 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		117FE6351DFC9108009D4740 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -663,6 +657,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -710,6 +705,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -738,7 +734,9 @@
 			baseConfigurationReference = 40BB19A258B46F908F707380 /* Pods-DoorDash_Homework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4727BSHESM;
 				INFOPLIST_FILE = DoorDash_Homework/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.desai.nimesh.DoorDash-Homework";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -750,7 +748,9 @@
 			baseConfigurationReference = E941960A197958E52F577A77 /* Pods-DoorDash_Homework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4727BSHESM;
 				INFOPLIST_FILE = DoorDash_Homework/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.desai.nimesh.DoorDash-Homework";
 				PRODUCT_NAME = "$(TARGET_NAME)";

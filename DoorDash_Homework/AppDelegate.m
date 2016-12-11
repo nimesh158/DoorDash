@@ -12,9 +12,12 @@
 
 #import "DDStoreSearch.h"
 #import "DDRestaurantMenuSearch.h"
-
+#import "DDTabBarController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) DDTabBarController *tabBarController;
+@property (nonatomic, assign) BOOL isFirstTimeLaunch;
 
 @end
 
@@ -22,31 +25,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:255.0/255.0 green:26.0/255.0 blue:64.0/255.0 alpha:1.0]];
+    
+    self.tabBarController = (DDTabBarController *)self.window.rootViewController;
+    
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
-    
-    DDStoreSearch *storeSearch = [[DDStoreSearch alloc] init];
-    DDRestaurantMenuSearch *menu = [[DDRestaurantMenuSearch alloc] init];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [storeSearch
-         searchStoresInAreaWithLatitude:37.42274
-         longitude:-122.139956
-         success:^(NSArray *stores) {
-             
-         }
-         failure:^(NSError *error) {
-             
-         }];
-        
-        [menu
-         findRestaurantMenuForRestaurantWithID:9
-         success:^(id responseObject) {
-             NSLog(@"Success: %@", responseObject);
-         }
-         failure:^(NSError *error) {
-             
-         }];
-    });
     
     return YES;
 }
