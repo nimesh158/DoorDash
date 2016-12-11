@@ -34,7 +34,7 @@ static NSString * const kDDErrorDomain = @"com.doordash.homework.restaurant.menu
     return self;
 }
 
-- (void)findRestaurantMenuForRestaurantWithID:(int)restaurantID
+- (void)findRestaurantMenuForRestaurantWithID:(NSInteger)restaurantID
                                       success:(DDRestaurantMenuSearchSuccess)success
                                       failure:(DDrestaurantMenuSearchFailure)failure {
     if ([[AFNetworkReachabilityManager sharedManager] isReachable]) {
@@ -93,7 +93,7 @@ static NSString * const kDDErrorDomain = @"com.doordash.homework.restaurant.menu
         DDRestaurantMenu *menu = [DDRestaurantMenuMapper restaurantMenuFromData:responseObject];
         dispatch_async(dispatch_get_main_queue(), ^{
             if (success != nil) {
-                success(menu);
+                success(@[menu]);
             }
         });
     } else if ([responseObject isKindOfClass:[NSArray class]]) {

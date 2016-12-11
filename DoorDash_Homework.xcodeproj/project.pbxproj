@@ -20,6 +20,7 @@
 		1157B5351DFD047200005698 /* DDRestaurantMenuMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157B5341DFD047200005698 /* DDRestaurantMenuMapperTests.m */; };
 		1157B5371DFD05D300005698 /* DDRestaurantMenuCategoryMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157B5361DFD05D300005698 /* DDRestaurantMenuCategoryMapperTests.m */; };
 		1157B5391DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h in Sources */ = {isa = PBXBuildFile; fileRef = 1157B5381DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h */; };
+		1157B53D1DFD1AF800005698 /* DDFavoriteStoresManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157B53C1DFD1AF800005698 /* DDFavoriteStoresManager.m */; };
 		117FE60C1DFC9107009D4740 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE60B1DFC9107009D4740 /* main.m */; };
 		117FE60F1DFC9107009D4740 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE60E1DFC9107009D4740 /* AppDelegate.m */; };
 		117FE6181DFC9107009D4740 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117FE6161DFC9107009D4740 /* Main.storyboard */; };
@@ -72,6 +73,8 @@
 		1157B5341DFD047200005698 /* DDRestaurantMenuMapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRestaurantMenuMapperTests.m; sourceTree = "<group>"; };
 		1157B5361DFD05D300005698 /* DDRestaurantMenuCategoryMapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRestaurantMenuCategoryMapperTests.m; sourceTree = "<group>"; };
 		1157B5381DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRestaurantMenuCategoryMapperTests.h; sourceTree = "<group>"; };
+		1157B53B1DFD1AF800005698 /* DDFavoriteStoresManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFavoriteStoresManager.h; sourceTree = "<group>"; };
+		1157B53C1DFD1AF800005698 /* DDFavoriteStoresManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFavoriteStoresManager.m; sourceTree = "<group>"; };
 		117FE6071DFC9107009D4740 /* DoorDash_Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDash_Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117FE60B1DFC9107009D4740 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		117FE60D1DFC9107009D4740 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -233,6 +236,15 @@
 			path = "Restaurant Menu Category Mapper";
 			sourceTree = "<group>";
 		};
+		1157B53A1DFD1AE500005698 /* Favorite Stores */ = {
+			isa = PBXGroup;
+			children = (
+				1157B53B1DFD1AF800005698 /* DDFavoriteStoresManager.h */,
+				1157B53C1DFD1AF800005698 /* DDFavoriteStoresManager.m */,
+			);
+			path = "Favorite Stores";
+			sourceTree = "<group>";
+		};
 		117FE5FE1DFC9107009D4740 = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +316,7 @@
 		117FE6401DFC923F009D4740 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				1157B53A1DFD1AE500005698 /* Favorite Stores */,
 				1139480B1DFCA9C300662712 /* Restaurant Menu */,
 				1139480C1DFCA9C300662712 /* Store Search */,
 				117FE6481DFC92A0009D4740 /* DDAPIClient.h */,
@@ -528,6 +541,7 @@
 				1157B52D1DFCEAF200005698 /* DDRestaurantMenuCategory.m in Sources */,
 				1157B5231DFCE73000005698 /* DDRestaurantMenu.m in Sources */,
 				117FE6461DFC9247009D4740 /* FirstViewController.m in Sources */,
+				1157B53D1DFD1AF800005698 /* DDFavoriteStoresManager.m in Sources */,
 				1157B5261DFCE85E00005698 /* DDRestaurantMenuMapper.m in Sources */,
 				117FE60C1DFC9107009D4740 /* main.m in Sources */,
 			);

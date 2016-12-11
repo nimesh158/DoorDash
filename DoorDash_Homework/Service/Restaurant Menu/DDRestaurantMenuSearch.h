@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^DDRestaurantMenuSearchSuccess)(id _Nullable);
+typedef void(^DDRestaurantMenuSearchSuccess)(NSArray * _Nullable);
 typedef void(^DDrestaurantMenuSearchFailure)(NSError * _Nullable);
 
 @interface DDRestaurantMenuSearch : NSObject
 
-- (void)findRestaurantMenuForRestaurantWithID:(int)restaurantID
+- (void)findRestaurantMenuForRestaurantWithID:(NSInteger)restaurantID
                                       success:(DDRestaurantMenuSearchSuccess _Nonnull)success
                                       failure:(DDrestaurantMenuSearchFailure _Nonnull)failure;
 - (void)cancel;

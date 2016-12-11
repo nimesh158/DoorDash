@@ -32,3 +32,6 @@ NSString * const kRestaurantMenuNameKey = @"name";
 NSString * const kRestaurantMenuCategoriesKey = @"menu_categories";
 NSInteger  const kInvalidRestaurantMenuID = -1;
 NSString * const kRestaurantMenuTitleKey = @"title";
+NSInteger  const kFavoriteStoresInvalidStoreErrorCode = 5001;
+NSString * const kFavoriteStoresKey = @"favoriteStores";
+NSInteger  const kCannotUnFavoriteAStoreNotFavorited = 6001;

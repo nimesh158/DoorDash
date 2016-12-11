@@ -10,8 +10,8 @@
 
 #import <UIKit/UIKit.h>
 
-
 typedef void(^DDStoreImageDownloadedCompletionBlock)(UIImage * _Nullable);
+typedef void(^DDStoreMenusDownloadCompletionBlock) (NSArray * _Nullable, NSError * _Nullable);
 
 @interface DDStore : NSObject
 
@@ -33,5 +33,11 @@ typedef void(^DDStoreImageDownloadedCompletionBlock)(UIImage * _Nullable);
  * @param completion Called once the data is successfully loaded.
  */
 - (void)getStoreImageWithCompletion:(DDStoreImageDownloadedCompletionBlock _Nonnull)completion;
+
+/*!
+ * @discussion Loads the store menus from the server and returns it in the completion block.
+ * @param completionBlock Called once the data is either successfully loaded, or something goes wrong.
+ */
+- (void)getStoreMenusWithCompletion:(DDStoreMenusDownloadCompletionBlock _Nonnull)completionBlock;
 
 @end
