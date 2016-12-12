@@ -131,7 +131,13 @@
     }
     [cell updateCellWithStoreDeliveryCost:deliveryCost];
     
-    NSString *deliveryTime = [NSString stringWithFormat:@"%.0f min", store.minimumDeliveryTime];
+    
+    NSString *deliveryTime;
+    if (store.minimumDeliveryTime > kInvalidMinimumDeliveryTime) {
+        deliveryTime = [NSString stringWithFormat:@"%.0f min", store.minimumDeliveryTime];
+    } else {
+        deliveryTime = @"";
+    }
     [cell updateCellWithStoreDeliveryTimeEstimate:deliveryTime];
     
     __weak typeof(self)weakSelf = self;
