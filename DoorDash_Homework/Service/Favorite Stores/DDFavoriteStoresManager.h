@@ -14,6 +14,12 @@ typedef void(^DDFavoriteStoresIsStoreCurrentlyFavorited)(BOOL);
 
 @class DDStore;
 
+/**
+ * A better design for this class is to Inject the backing data store. Right now the dependency is on NSUserDefaults, but
+ * we could implement a protocol that the backing store would conform to, thus adding a layer of abstraction.
+ * This would also assist in Unit Testing.
+ */
+
 @interface DDFavoriteStoresManager : NSObject
 
 + (instancetype _Nonnull)sharedInstance;

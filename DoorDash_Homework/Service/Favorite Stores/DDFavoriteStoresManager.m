@@ -23,14 +23,14 @@ static NSString * const kDDErrorDomain = @"com.doordash.homework.favorite.stores
 
 @implementation DDFavoriteStoresManager
 
+static DDFavoriteStoresManager *_manager = nil;
+static dispatch_once_t onceToken = 0;
 + (instancetype)sharedInstance {
-    static DDFavoriteStoresManager *manager = nil;
-    static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[self alloc] init];
+        _manager = [[self alloc] init];
     });
     
-    return manager;
+    return _manager;
 }
 
 - (instancetype)init {
@@ -59,7 +59,7 @@ static NSString * const kDDErrorDomain = @"com.doordash.homework.favorite.stores
     return error;
 }
 
-- (NSError *)getCannotUnFavoriteAStoreNotFavorited {
+- (NSError *)getCannotUnFavoriteAStoreNotFavoritedError {
     NSDictionary *userInfo = @{
                                @"userInfo" : @"Cnanot unfavorite a store not favorited"
                                };
@@ -70,14 +70,30 @@ static NSString * const kDDErrorDomain = @"com.doordash.homework.favorite.stores
     return error;
 }
 
-- (BOOL)isStoreInFavorites:(DDStore *)store {
+- (NSError *)getStoreAlreadyInFavoritesError {
+    NSDictionary *userInfo = @{
+                               @"userInfo" : @"Cnanot save a store twice. It's already favorited."
+                               };
+    NSError *error = [[NSError alloc] initWithDomain:kDDErrorDomain
+                                                code:kStoreAlreadyFavorited
+                                            userInfo:userInfo];
+    
+    return error;
+}
+
+- (BOOL)isStoreInFavorites:(DDStore *)store favorites:(NSArray *)favorites {
     if (store == nil) {
         NSLog(@"ERROR: Cannot check for nil store");
         return NO;
     }
+
+    if (favorites.count <= 0) {
+        NSLog(@"Empty Store");
+        return NO;
+    }
     
-    for (NSInteger index = 0; index < self.favoriteStores.count; index++) {
-        DDStore *localStore = self.favoriteStores[index];
+    for (NSInteger index = 0; index < favorites.count; index++) {
+        DDStore *localStore = favorites[index];
         if (localStore.storeID == store.storeID) {
             return YES;
         }
@@ -131,9 +147,11 @@ static NSString * const kDDErrorDomain = @"com.doordash.homework.favorite.stores
     __strong typeof(weakSelf) strongSelf = weakSelf;
     
     dispatch_async(self.workQueue, ^{
-        if ([strongSelf isStoreInFavorites:store] == NO) {
-            [self favoriteStore:store];
+        if ([strongSelf isStoreInFavorites:store favorites:strongSelf.favoriteStores] == NO) {
+            [strongSelf favoriteStore:store];
             completion(YES, nil);
+        } else {
+            completion(NO, [self getStoreAlreadyInFavoritesError]);
         }
     });
 }
@@ -149,10 +167,10 @@ static NSString * const kDDErrorDomain = @"com.doordash.homework.favorite.stores
     __strong typeof(weakSelf) strongSelf = weakSelf;
     
     dispatch_async(self.workQueue, ^{
-        if ([strongSelf isStoreInFavorites:store] == NO) {
-            completion(NO, [self getCannotUnFavoriteAStoreNotFavorited]);
+        if ([strongSelf isStoreInFavorites:store favorites:strongSelf.favoriteStores] == NO) {
+            completion(NO, [self getCannotUnFavoriteAStoreNotFavoritedError]);
         } else {
-            [self unfavoriteStore:store];
+            [strongSelf unfavoriteStore:store];
             completion(YES, nil);
         }
     });
@@ -161,7 +179,7 @@ static NSString * const kDDErrorDomain = @"com.doordash.homework.favorite.stores
 - (void)isStoreCurrentlyFavorited:(DDStore *)favoritedStore
                    withCompletion:(DDFavoriteStoresIsStoreCurrentlyFavorited _Nonnull)completion {
     if (completion == nil) {
-        NSLog(@"ERROR: Cannot return result of check. Aborting");
+        NSLog(@"ERROR: COmpletion block is nil. Cannot return result of check. Aborting");
         return;
     }
     
@@ -174,9 +192,17 @@ static NSString * const kDDErrorDomain = @"com.doordash.homework.favorite.stores
     __strong typeof(weakSelf) strongSelf = weakSelf;
     
     dispatch_async(self.workQueue, ^{
-        BOOL inFavorites = [strongSelf isStoreInFavorites:favoritedStore];
+        BOOL inFavorites = [strongSelf isStoreInFavorites:favoritedStore
+                                                favorites:strongSelf.favoriteStores];
         completion(inFavorites);
     });
+}
+
++(void)resetSharedInstance_TestOnly {
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kFavoriteStoresKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    onceToken = 0;
+    _manager = nil;
 }
 
 @end

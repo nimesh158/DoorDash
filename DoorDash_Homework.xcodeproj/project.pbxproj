@@ -32,6 +32,7 @@
 		117D60CF1DFE05BA002CA482 /* DDFavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D60CE1DFE05BA002CA482 /* DDFavoritesTableViewController.m */; };
 		117D60D41DFE0F1F002CA482 /* DDRestaurantMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D60D21DFE0F1F002CA482 /* DDRestaurantMenuViewController.m */; };
 		117D60D51DFE0F1F002CA482 /* DDRestaurantMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117D60D31DFE0F1F002CA482 /* DDRestaurantMenuViewController.xib */; };
+		117D60D71DFE3098002CA482 /* DDFavoriteStoresManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D60D61DFE3098002CA482 /* DDFavoriteStoresManagerTests.m */; };
 		117FE60C1DFC9107009D4740 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE60B1DFC9107009D4740 /* main.m */; };
 		117FE60F1DFC9107009D4740 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE60E1DFC9107009D4740 /* AppDelegate.m */; };
 		117FE61A1DFC9108009D4740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117FE6191DFC9108009D4740 /* Assets.xcassets */; };
@@ -99,6 +100,7 @@
 		117D60D11DFE0F1F002CA482 /* DDRestaurantMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRestaurantMenuViewController.h; sourceTree = "<group>"; };
 		117D60D21DFE0F1F002CA482 /* DDRestaurantMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRestaurantMenuViewController.m; sourceTree = "<group>"; };
 		117D60D31DFE0F1F002CA482 /* DDRestaurantMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDRestaurantMenuViewController.xib; sourceTree = "<group>"; };
+		117D60D61DFE3098002CA482 /* DDFavoriteStoresManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFavoriteStoresManagerTests.m; sourceTree = "<group>"; };
 		117FE6071DFC9107009D4740 /* DoorDash_Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDash_Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117FE60B1DFC9107009D4740 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		117FE60D1DFC9107009D4740 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 				1157B5341DFD047200005698 /* DDRestaurantMenuMapperTests.m */,
 				1157B5381DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h */,
 				1157B5361DFD05D300005698 /* DDRestaurantMenuCategoryMapperTests.m */,
+				117D60D61DFE3098002CA482 /* DDFavoriteStoresManagerTests.m */,
 			);
 			path = DoorDash_HomeworkTests;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				1157B5201DFCD79100005698 /* DDStoreMapperTests.m in Sources */,
 				1157B5391DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h in Sources */,
 				1157B5351DFD047200005698 /* DDRestaurantMenuMapperTests.m in Sources */,
+				117D60D71DFE3098002CA482 /* DDFavoriteStoresManagerTests.m in Sources */,
 				1157B5371DFD05D300005698 /* DDRestaurantMenuCategoryMapperTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

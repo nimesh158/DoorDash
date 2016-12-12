@@ -35,3 +35,4 @@ NSString * const kRestaurantMenuTitleKey = @"title";
 NSInteger  const kFavoriteStoresInvalidStoreErrorCode = 5001;
 NSString * const kFavoriteStoresKey = @"favoriteStores";
 NSInteger  const kCannotUnFavoriteAStoreNotFavorited = 6001;
+NSInteger  const kStoreAlreadyFavorited = 6001;

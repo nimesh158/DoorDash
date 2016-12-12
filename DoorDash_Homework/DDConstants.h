@@ -35,3 +35,4 @@ FOUNDATION_EXPORT NSString * const kRestaurantMenuTitleKey;
 FOUNDATION_EXPORT NSInteger  const kFavoriteStoresInvalidStoreErrorCode;
 FOUNDATION_EXPORT NSString * const kFavoriteStoresKey;
 FOUNDATION_EXPORT NSInteger  const kCannotUnFavoriteAStoreNotFavorited;
+FOUNDATION_EXPORT NSInteger  const kStoreAlreadyFavorited;
