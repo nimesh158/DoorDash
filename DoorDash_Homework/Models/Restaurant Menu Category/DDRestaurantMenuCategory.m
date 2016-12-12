@@ -16,10 +16,10 @@
 
 @implementation DDRestaurantMenuCategory
 
-- (instancetype _Nonnull)initWithCategoryTitle:(NSString * _Nullable)categoryName {
+- (instancetype _Nonnull)initWithCategoryTitle:(NSString * _Nullable)categoryTitle {
     self = [super init];
     if (self) {
-        _categoryTitle = categoryName;
+        _categoryTitle = categoryTitle;
     }
     
     return self;

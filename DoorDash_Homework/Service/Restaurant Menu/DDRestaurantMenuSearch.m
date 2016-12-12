@@ -77,14 +77,6 @@ static NSString * const kDDErrorDomain = @"com.doordash.homework.restaurant.menu
     }
 }
 
-- (void)cancel {
-    __weak typeof (self) weakSelf = self;
-    __strong typeof (self) strongWeakSelf = weakSelf;
-    dispatch_async(self.workQueue, ^{
-        [strongWeakSelf.apiClient cancel];
-    });
-}
-
 - (void)handleSuccessResponse:(id)responseObject
                   withSuccess:(DDRestaurantMenuSearchSuccess)success
                       failure:(DDrestaurantMenuSearchFailure)failure {

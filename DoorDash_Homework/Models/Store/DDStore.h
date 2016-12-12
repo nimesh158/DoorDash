@@ -21,6 +21,16 @@ typedef void(^DDStoreMenusDownloadCompletionBlock) (NSArray * _Nullable, NSError
 @property (nonatomic, assign, readonly) CGFloat deliveryFee;
 @property (nonatomic, assign, readonly) CGFloat minimumDeliveryTime;
 
+/**
+ Creates and returns an instnace of this class with the storeID, name, description, deliveryFee, storeImageURL and minimumDeliveryTime passed in.
+ @param storeID ID of the store being created.
+ @param storeName name of the store being created.
+ @param storeDescription provides a description of the store being created.
+ @param deliveryFee deliveryFee of the store being created.
+ @param storeImageURL url where the image of the store being created is hosted.
+ @param minimumDeliveryTime minimum delivery time of the store being created.
+ @returns An instance of this class.
+ */
 - (instancetype _Nonnull)initWithStoreID:(NSInteger)storeID
                                storeName:(NSString * _Nullable)storeName
                         storeDescription:(NSString * _Nullable)storeDescription

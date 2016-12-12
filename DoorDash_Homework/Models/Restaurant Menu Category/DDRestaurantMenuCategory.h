@@ -12,6 +12,11 @@
 
 @property (nonatomic, copy, readonly, nullable) NSString *categoryTitle;
 
-- (instancetype _Nonnull)initWithCategoryTitle:(NSString * _Nullable)categoryName;
+/**
+ Creates and returns an instnace of this class with the title passed in.
+ @param categoryTitle title of this category.
+ @returns An istance of this class.
+ */
+- (instancetype _Nonnull)initWithCategoryTitle:(NSString * _Nullable)categoryTitle;
 
 @end

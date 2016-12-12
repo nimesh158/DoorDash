@@ -12,6 +12,4 @@
 
 @interface DDAPIClient : AFHTTPSessionManager
 
-- (void)cancel;
-
 @end

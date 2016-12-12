@@ -10,14 +10,34 @@
 
 @interface DDTableViewCell : UITableViewCell
 
+/**
+ Updates the store name.
+ @param name that the cell is to be updated with.
+ */
 - (void)updateCellWithStoreName:(NSString *)name;
 
+/**
+ Updates the store type.
+ @param storeType that the cell is to be updated with.
+ */
 - (void)updateCellWithStoreType:(NSString *)storeType;
 
+/**
+ Updates the store delivery cost.
+ @param storeDeliveryCost that the cell is to be updated with.
+ */
 - (void)updateCellWithStoreDeliveryCost:(NSString *)storeDeliveryCost;
 
+/**
+ Updates the store delivery time.
+ @param storeDeliveryTime that the cell is to be updated with.
+ */
 - (void)updateCellWithStoreDeliveryTimeEstimate:(NSString *)storeDeliveryTime;
 
+/**
+ Updates the store delivery image.
+ @param image that the cell is to be updated with.
+ */
 - (void)updateCellWithStoreImage:(UIImage *)image;
 
 @end

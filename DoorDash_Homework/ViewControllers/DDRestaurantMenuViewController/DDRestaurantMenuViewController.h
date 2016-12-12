@@ -12,6 +12,11 @@
 
 @interface DDRestaurantMenuViewController : UIViewController
 
+/**
+ Use this initializer to set the store whose menu is to be viewed.
+ @param store whose menu is to be viewed
+ @returns An instance of this class.
+ */
 - (instancetype)initWithStore:(DDStore *)store;
 
 @end

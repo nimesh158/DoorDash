@@ -11,6 +11,9 @@
 
 @protocol DDChooseAddressViewControllerProtocol <NSObject>
 
+/**
+ Called whenever the confirmation button is tapped.
+ */
 - (void)didTapConfirmAddressButtonForAddress:(CLLocationCoordinate2D)address;
 
 @end

@@ -53,7 +53,7 @@ static NSString * const kStoreDescription3 = @"testDescription3";
 - (void)tearDown {
     self.manager = nil;
     [DDFavoriteStoresManager resetSharedInstance_TestOnly];
-    t
+    
     [super tearDown];
 }
 

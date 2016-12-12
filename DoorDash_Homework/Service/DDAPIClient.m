@@ -24,8 +24,4 @@
     return self;
 }
 
-- (void)cancel {
-    [[self operationQueue] cancelAllOperations];
-}
-
 @end
