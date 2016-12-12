@@ -10,11 +10,12 @@
 
 @interface DDTableViewCell ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *storeImageView;
-@property (weak, nonatomic) IBOutlet UILabel *storeName;
-@property (weak, nonatomic) IBOutlet UILabel *storeType;
-@property (weak, nonatomic) IBOutlet UILabel *storeDeliveryCost;
-@property (weak, nonatomic) IBOutlet UILabel *storeDeliveryTimeEstimate;
+@property (nonatomic, weak) IBOutlet UIImageView *storeImageView;
+@property (nonatomic, weak) IBOutlet UILabel *storeName;
+@property (nonatomic, weak) IBOutlet UILabel *storeType;
+@property (nonatomic, weak) IBOutlet UILabel *storeDeliveryCost;
+@property (nonatomic, weak) IBOutlet UILabel *storeDeliveryTimeEstimate;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 
 @end
@@ -24,6 +25,13 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    
+    [self.activityIndicator startAnimating];
+    [self.storeImageView setHidden:YES];
 }
 
 #pragma mark - Public Methods
@@ -45,6 +53,8 @@
 
 - (void)updateCellWithStoreImage:(UIImage *)image {
     [self.storeImageView setImage:image];
+    [self.storeImageView setHidden:NO];
+    [self.activityIndicator stopAnimating];
 }
 
 @end

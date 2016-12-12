@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  DDAppDelegate.h
 //  DoorDash_Homework
 //
 //  Created by Nimesh Desai on 12/10/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface DDAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

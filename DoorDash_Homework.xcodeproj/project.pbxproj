@@ -24,7 +24,6 @@
 		1157B5371DFD05D300005698 /* DDRestaurantMenuCategoryMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157B5361DFD05D300005698 /* DDRestaurantMenuCategoryMapperTests.m */; };
 		1157B5391DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h in Sources */ = {isa = PBXBuildFile; fileRef = 1157B5381DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h */; };
 		1157B53D1DFD1AF800005698 /* DDFavoriteStoresManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157B53C1DFD1AF800005698 /* DDFavoriteStoresManager.m */; };
-		117D60BB1DFDD5C1002CA482 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117D60BA1DFDD5C1002CA482 /* Main.storyboard */; };
 		117D60C01DFDE17E002CA482 /* DDExploreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D60BE1DFDE17E002CA482 /* DDExploreTableViewController.m */; };
 		117D60C41DFDE4E5002CA482 /* DDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D60C31DFDE4E5002CA482 /* DDTabBarController.m */; };
 		117D60CA1DFDF275002CA482 /* DDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D60C81DFDF275002CA482 /* DDTableViewCell.m */; };
@@ -34,10 +33,11 @@
 		117D60D51DFE0F1F002CA482 /* DDRestaurantMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117D60D31DFE0F1F002CA482 /* DDRestaurantMenuViewController.xib */; };
 		117D60D71DFE3098002CA482 /* DDFavoriteStoresManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D60D61DFE3098002CA482 /* DDFavoriteStoresManagerTests.m */; };
 		117FE60C1DFC9107009D4740 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE60B1DFC9107009D4740 /* main.m */; };
-		117FE60F1DFC9107009D4740 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE60E1DFC9107009D4740 /* AppDelegate.m */; };
+		117FE60F1DFC9107009D4740 /* DDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE60E1DFC9107009D4740 /* DDAppDelegate.m */; };
 		117FE61A1DFC9108009D4740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117FE6191DFC9108009D4740 /* Assets.xcassets */; };
 		117FE6331DFC9108009D4740 /* DoorDash_HomeworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE6321DFC9108009D4740 /* DoorDash_HomeworkUITests.m */; };
 		117FE64A1DFC92A0009D4740 /* DDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE6491DFC92A0009D4740 /* DDAPIClient.m */; };
+		11BBB8761DFF622A00A90EFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11BBB8741DFF622A00A90EFC /* Main.storyboard */; };
 		690EE32F092EDE7B5D864D3E /* libPods-DoorDash_Homework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D220F67C91EC2559798A09C /* libPods-DoorDash_Homework.a */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +87,6 @@
 		1157B5381DFD0BFD00005698 /* DDRestaurantMenuCategoryMapperTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRestaurantMenuCategoryMapperTests.h; sourceTree = "<group>"; };
 		1157B53B1DFD1AF800005698 /* DDFavoriteStoresManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFavoriteStoresManager.h; sourceTree = "<group>"; };
 		1157B53C1DFD1AF800005698 /* DDFavoriteStoresManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFavoriteStoresManager.m; sourceTree = "<group>"; };
-		117D60BA1DFDD5C1002CA482 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 		117D60BD1DFDE17E002CA482 /* DDExploreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDExploreTableViewController.h; sourceTree = "<group>"; };
 		117D60BE1DFDE17E002CA482 /* DDExploreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDExploreTableViewController.m; sourceTree = "<group>"; };
 		117D60C21DFDE4E5002CA482 /* DDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTabBarController.h; sourceTree = "<group>"; };
@@ -103,8 +102,8 @@
 		117D60D61DFE3098002CA482 /* DDFavoriteStoresManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFavoriteStoresManagerTests.m; sourceTree = "<group>"; };
 		117FE6071DFC9107009D4740 /* DoorDash_Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDash_Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117FE60B1DFC9107009D4740 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		117FE60D1DFC9107009D4740 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		117FE60E1DFC9107009D4740 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		117FE60D1DFC9107009D4740 /* DDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDAppDelegate.h; sourceTree = "<group>"; };
+		117FE60E1DFC9107009D4740 /* DDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDAppDelegate.m; sourceTree = "<group>"; };
 		117FE6191DFC9108009D4740 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		117FE61E1DFC9108009D4740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		117FE6231DFC9108009D4740 /* DoorDash_HomeworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoorDash_HomeworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +113,7 @@
 		117FE6341DFC9108009D4740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		117FE6481DFC92A0009D4740 /* DDAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAPIClient.h; sourceTree = "<group>"; };
 		117FE6491DFC92A0009D4740 /* DDAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAPIClient.m; sourceTree = "<group>"; };
+		11BBB8751DFF622A00A90EFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		40BB19A258B46F908F707380 /* Pods-DoorDash_Homework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorDash_Homework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoorDash_Homework/Pods-DoorDash_Homework.debug.xcconfig"; sourceTree = "<group>"; };
 		6D220F67C91EC2559798A09C /* libPods-DoorDash_Homework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DoorDash_Homework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E941960A197958E52F577A77 /* Pods-DoorDash_Homework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorDash_Homework.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoorDash_Homework/Pods-DoorDash_Homework.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 		113948101DFCAD2400662712 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				117D60BA1DFDD5C1002CA482 /* Main.storyboard */,
+				11BBB8741DFF622A00A90EFC /* Main.storyboard */,
 				117FE6191DFC9108009D4740 /* Assets.xcassets */,
 				117FE61E1DFC9108009D4740 /* Info.plist */,
 			);
@@ -347,8 +347,8 @@
 		117FE6091DFC9107009D4740 /* DoorDash_Homework */ = {
 			isa = PBXGroup;
 			children = (
-				117FE60D1DFC9107009D4740 /* AppDelegate.h */,
-				117FE60E1DFC9107009D4740 /* AppDelegate.m */,
+				117FE60D1DFC9107009D4740 /* DDAppDelegate.h */,
+				117FE60E1DFC9107009D4740 /* DDAppDelegate.m */,
 				113948081DFCA76A00662712 /* DDConstants.h */,
 				113948091DFCA76A00662712 /* DDConstants.m */,
 				1157B5131DFCD11200005698 /* Models */,
@@ -536,8 +536,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				117D60BB1DFDD5C1002CA482 /* Main.storyboard in Resources */,
 				111BFC681DFD3C37007F28EC /* DDChooseAddressViewController.xib in Resources */,
+				11BBB8761DFF622A00A90EFC /* Main.storyboard in Resources */,
 				117D60D51DFE0F1F002CA482 /* DDRestaurantMenuViewController.xib in Resources */,
 				117FE61A1DFC9108009D4740 /* Assets.xcassets in Resources */,
 				117D60CB1DFDF275002CA482 /* DDTableViewCell.xib in Resources */,
@@ -615,7 +615,7 @@
 			files = (
 				1139480A1DFCA76A00662712 /* DDConstants.m in Sources */,
 				1157B5301DFCEB6F00005698 /* DDRestaurantMenuCategoryMapper.m in Sources */,
-				117FE60F1DFC9107009D4740 /* AppDelegate.m in Sources */,
+				117FE60F1DFC9107009D4740 /* DDAppDelegate.m in Sources */,
 				113948131DFCC24700662712 /* DDRestaurantMenuSearch.m in Sources */,
 				117D60CF1DFE05BA002CA482 /* DDFavoritesTableViewController.m in Sources */,
 				1139480F1DFCA9DD00662712 /* DDStoreSearch.m in Sources */,
@@ -669,6 +669,17 @@
 			targetProxy = 117FE62F1DFC9108009D4740 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		11BBB8741DFF622A00A90EFC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11BBB8751DFF622A00A90EFC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		117FE6351DFC9108009D4740 /* Debug */ = {

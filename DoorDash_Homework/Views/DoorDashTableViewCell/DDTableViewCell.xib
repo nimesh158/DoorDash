@@ -12,15 +12,29 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="87"/>
+                <frame key="frameInset" width="320" height="87.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Obi-sv-WBo">
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZeH-MM-T7Q">
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2xh-rP-XvG"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Obi-sv-WBo">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="Yvz-jF-hEl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="105" id="Yvz-jF-hEl"/>
+                            <constraint firstItem="2xh-rP-XvG" firstAttribute="centerY" secondItem="ZeH-MM-T7Q" secondAttribute="centerY" id="Brw-Zl-NTa"/>
+                            <constraint firstItem="Obi-sv-WBo" firstAttribute="top" secondItem="ZeH-MM-T7Q" secondAttribute="top" id="Dku-Su-gdr"/>
+                            <constraint firstItem="2xh-rP-XvG" firstAttribute="centerX" secondItem="ZeH-MM-T7Q" secondAttribute="centerX" id="LtJ-1A-1xx"/>
+                            <constraint firstAttribute="bottom" secondItem="Obi-sv-WBo" secondAttribute="bottom" id="WBq-pV-yKP"/>
+                            <constraint firstItem="Obi-sv-WBo" firstAttribute="leading" secondItem="ZeH-MM-T7Q" secondAttribute="leading" id="hhq-Qb-Auy"/>
+                            <constraint firstAttribute="trailing" secondItem="Obi-sv-WBo" secondAttribute="trailing" id="tla-hc-Lbf"/>
                         </constraints>
-                    </imageView>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Knk-zl-IPh" userLabel="Container">
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hy-78-GtN" userLabel="Name">
@@ -72,16 +86,17 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
+                    <constraint firstItem="Knk-zl-IPh" firstAttribute="leading" secondItem="ZeH-MM-T7Q" secondAttribute="trailing" constant="17" id="0Dv-pm-TDy"/>
+                    <constraint firstItem="ZeH-MM-T7Q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="2NN-pW-Kzg"/>
                     <constraint firstItem="Knk-zl-IPh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="F77-sk-E3d"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Obi-sv-WBo" secondAttribute="bottom" constant="5" id="TJv-1C-Y4y"/>
-                    <constraint firstItem="Obi-sv-WBo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="buW-ep-pFQ"/>
+                    <constraint firstItem="ZeH-MM-T7Q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="SQT-Rh-9Yn"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ZeH-MM-T7Q" secondAttribute="bottom" constant="5" id="gdu-D2-Dtr"/>
                     <constraint firstAttribute="bottom" secondItem="Knk-zl-IPh" secondAttribute="bottom" id="l5V-hv-DkV"/>
-                    <constraint firstItem="Obi-sv-WBo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="mPo-fj-MMI"/>
-                    <constraint firstItem="Knk-zl-IPh" firstAttribute="leading" secondItem="Obi-sv-WBo" secondAttribute="trailing" constant="17" id="phT-hT-uno"/>
                     <constraint firstAttribute="trailing" secondItem="Knk-zl-IPh" secondAttribute="trailing" id="reI-4o-0Tc"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="activityIndicator" destination="2xh-rP-XvG" id="vOp-Ul-da1"/>
                 <outlet property="storeDeliveryCost" destination="nHr-fr-39a" id="go8-p9-sXU"/>
                 <outlet property="storeDeliveryTimeEstimate" destination="nJ6-rO-Dvr" id="Jr5-j1-dSY"/>
                 <outlet property="storeImageView" destination="Obi-sv-WBo" id="0V9-FQ-rkE"/>
