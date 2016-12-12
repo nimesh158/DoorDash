@@ -38,7 +38,14 @@ static NSString * const kDDErrorDomain = @"com.doordash.homework.favorite.stores
     if (self) {
         _workQueue = dispatch_queue_create("com.doordash.homework.favorite.stores.queue", DISPATCH_QUEUE_SERIAL);
         _userDefaults = [NSUserDefaults standardUserDefaults];
-        _favoriteStores = [[_userDefaults objectForKey:kFavoriteStoresKey] mutableCopy];
+        NSArray *favorites = [[_userDefaults objectForKey:kFavoriteStoresKey] mutableCopy];
+        _favoriteStores = [NSMutableArray arrayWithCapacity:0];
+        if (favorites != nil) {
+            for (NSData *data in favorites) {
+                DDStore *store = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+                [_favoriteStores addObject:store];
+            }
+        }
     }
     
     return self;
@@ -70,8 +77,8 @@ static NSString * const kDDErrorDomain = @"com.doordash.homework.favorite.stores
     }
     
     for (NSInteger index = 0; index < self.favoriteStores.count; index++) {
-        DDStore *store = self.favoriteStores[index];
-        if (store.storeID == store.storeID) {
+        DDStore *localStore = self.favoriteStores[index];
+        if (localStore.storeID == store.storeID) {
             return YES;
         }
     }
@@ -81,14 +88,22 @@ static NSString * const kDDErrorDomain = @"com.doordash.homework.favorite.stores
 
 - (void)favoriteStore:(DDStore *)store {
     [self.favoriteStores addObject:store];
-    [self.userDefaults setObject:[self.favoriteStores copy]
-                          forKey:kFavoriteStoresKey];
-    [self.userDefaults synchronize];
+    [self archiveFavoritesToDefaults];
 }
 
 - (void)unfavoriteStore:(DDStore *)store {
     [self.favoriteStores removeObject:store];
-    [self.userDefaults setObject:[self.favoriteStores copy]
+    [self archiveFavoritesToDefaults];
+}
+
+- (void)archiveFavoritesToDefaults {
+    NSMutableArray *archiveArray = [NSMutableArray arrayWithCapacity:self.favoriteStores.count];
+    for (DDStore *store in self.favoriteStores) {
+        NSData *encodedStore = [NSKeyedArchiver archivedDataWithRootObject:store];
+        [archiveArray addObject:encodedStore];
+    }
+    
+    [self.userDefaults setObject:archiveArray
                           forKey:kFavoriteStoresKey];
     [self.userDefaults synchronize];
 }
@@ -100,7 +115,7 @@ static NSString * const kDDErrorDomain = @"com.doordash.homework.favorite.stores
     }
     
     dispatch_async(self.workQueue, ^{
-        NSArray *favorites= [self.favoriteStores copy];
+        NSArray *favorites = [self.favoriteStores copy];
         completion(favorites);
     });
 }

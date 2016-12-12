@@ -12,6 +12,7 @@
 #import "DDStore.h"
 #import "DDStoreSearch.h"
 #import "DDTableViewCell.h"
+#import "DDRestaurantMenuViewController.h"
 
 @interface DDExploreTableViewController ()
 
@@ -36,14 +37,14 @@
     [self setUpTableView];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self setUpNavigationBarTitle];
+}
+
 - (void)setUpNavigationBar {
-    self.navigationItem.title = @"DoorDash";
-    
-    NSDictionary *titleTextAttributes =  @{
-                                           NSForegroundColorAttributeName : [UIColor colorWithRed:255.0/255.0 green:26/255.0 blue:64/255.0 alpha:1.0]
-                                           };
-    [self.navigationController.navigationBar setTitleTextAttributes: titleTextAttributes];
-    
+    [self setUpNavigationBarTitle];
     UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav-address"]
                                                                           style:UIBarButtonItemStylePlain
                                                                          target:self
@@ -56,6 +57,15 @@
     
     self.navigationItem.leftBarButtonItem = leftBarButtonItem;
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+}
+
+- (void)setUpNavigationBarTitle {
+    self.navigationItem.title = @"DoorDash";
+    
+    NSDictionary *titleTextAttributes =  @{
+                                           NSForegroundColorAttributeName : [UIColor colorWithRed:255.0/255.0 green:26/255.0 blue:64/255.0 alpha:1.0]
+                                           };
+    [self.navigationController.navigationBar setTitleTextAttributes: titleTextAttributes];
 }
 
 - (void)leftBarButtonItemTapped {
@@ -145,6 +155,27 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath
                              animated:YES];
+    
+    NSArray *dataSource = [self getDataSource];
+    if (indexPath.row < dataSource.count) {
+        DDStore *store = dataSource[indexPath.row];
+        
+        DDRestaurantMenuViewController *restaurantMenuViewController = [[DDRestaurantMenuViewController alloc] initWithStore:store];
+        
+        [self updateNavigationBarBackButton];
+        
+        [self.navigationController pushViewController:restaurantMenuViewController
+                                             animated:YES];
+    }
+}
+
+- (void)updateNavigationBarBackButton {
+    UIBarButtonItem *newBackButton =
+    [[UIBarButtonItem alloc] initWithTitle:@"Back"
+                                     style:UIBarButtonItemStylePlain
+                                    target:nil
+                                    action:nil];
+    [[self navigationItem] setBackBarButtonItem:newBackButton];
 }
 
 #pragma mark - Show Alert

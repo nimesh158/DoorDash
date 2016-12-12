@@ -30,6 +30,8 @@
 		117D60CA1DFDF275002CA482 /* DDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D60C81DFDF275002CA482 /* DDTableViewCell.m */; };
 		117D60CB1DFDF275002CA482 /* DDTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117D60C91DFDF275002CA482 /* DDTableViewCell.xib */; };
 		117D60CF1DFE05BA002CA482 /* DDFavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D60CE1DFE05BA002CA482 /* DDFavoritesTableViewController.m */; };
+		117D60D41DFE0F1F002CA482 /* DDRestaurantMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D60D21DFE0F1F002CA482 /* DDRestaurantMenuViewController.m */; };
+		117D60D51DFE0F1F002CA482 /* DDRestaurantMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117D60D31DFE0F1F002CA482 /* DDRestaurantMenuViewController.xib */; };
 		117FE60C1DFC9107009D4740 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE60B1DFC9107009D4740 /* main.m */; };
 		117FE60F1DFC9107009D4740 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 117FE60E1DFC9107009D4740 /* AppDelegate.m */; };
 		117FE61A1DFC9108009D4740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117FE6191DFC9108009D4740 /* Assets.xcassets */; };
@@ -94,6 +96,9 @@
 		117D60C91DFDF275002CA482 /* DDTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDTableViewCell.xib; sourceTree = "<group>"; };
 		117D60CD1DFE05BA002CA482 /* DDFavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFavoritesTableViewController.h; sourceTree = "<group>"; };
 		117D60CE1DFE05BA002CA482 /* DDFavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFavoritesTableViewController.m; sourceTree = "<group>"; };
+		117D60D11DFE0F1F002CA482 /* DDRestaurantMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRestaurantMenuViewController.h; sourceTree = "<group>"; };
+		117D60D21DFE0F1F002CA482 /* DDRestaurantMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRestaurantMenuViewController.m; sourceTree = "<group>"; };
+		117D60D31DFE0F1F002CA482 /* DDRestaurantMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDRestaurantMenuViewController.xib; sourceTree = "<group>"; };
 		117FE6071DFC9107009D4740 /* DoorDash_Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDash_Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117FE60B1DFC9107009D4740 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		117FE60D1DFC9107009D4740 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -305,6 +310,16 @@
 			path = DDFavoritesViewController;
 			sourceTree = "<group>";
 		};
+		117D60D01DFE0F0C002CA482 /* DDRestaurantMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				117D60D11DFE0F1F002CA482 /* DDRestaurantMenuViewController.h */,
+				117D60D21DFE0F1F002CA482 /* DDRestaurantMenuViewController.m */,
+				117D60D31DFE0F1F002CA482 /* DDRestaurantMenuViewController.xib */,
+			);
+			path = DDRestaurantMenuViewController;
+			sourceTree = "<group>";
+		};
 		117FE5FE1DFC9107009D4740 = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +404,7 @@
 		117FE6411DFC9247009D4740 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				117D60D01DFE0F0C002CA482 /* DDRestaurantMenuViewController */,
 				117D60CC1DFE05A6002CA482 /* DDFavoritesViewController */,
 				117D60BC1DFDE15E002CA482 /* DDExploreViewController */,
 				111BFC621DFD3C37007F28EC /* DDChooseAddressViewController */,
@@ -519,6 +535,7 @@
 			files = (
 				117D60BB1DFDD5C1002CA482 /* Main.storyboard in Resources */,
 				111BFC681DFD3C37007F28EC /* DDChooseAddressViewController.xib in Resources */,
+				117D60D51DFE0F1F002CA482 /* DDRestaurantMenuViewController.xib in Resources */,
 				117FE61A1DFC9108009D4740 /* Assets.xcassets in Resources */,
 				117D60CB1DFDF275002CA482 /* DDTableViewCell.xib in Resources */,
 			);
@@ -599,6 +616,7 @@
 				113948131DFCC24700662712 /* DDRestaurantMenuSearch.m in Sources */,
 				117D60CF1DFE05BA002CA482 /* DDFavoritesTableViewController.m in Sources */,
 				1139480F1DFCA9DD00662712 /* DDStoreSearch.m in Sources */,
+				117D60D41DFE0F1F002CA482 /* DDRestaurantMenuViewController.m in Sources */,
 				117FE64A1DFC92A0009D4740 /* DDAPIClient.m in Sources */,
 				1157B51E1DFCD13C00005698 /* DDStoreMapper.m in Sources */,
 				117D60C41DFDE4E5002CA482 /* DDTabBarController.m in Sources */,

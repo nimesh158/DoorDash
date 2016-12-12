@@ -8,6 +8,7 @@
 
 #import "DDStore.h"
 
+#import "DDConstants.h"
 #import "DDRestaurantMenuSearch.h"
 
 @interface DDStore ()
@@ -54,6 +55,29 @@
     return self;
 }
 
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:@(self.storeID) forKey:kStoreIDKey];
+    [encoder encodeObject:self.storeName forKey:kStoreNameKey];
+    [encoder encodeObject:self.storeDescription forKey:kStoreDescriptionKey];
+    [encoder encodeObject:self.storeImageURL forKey:kStoreImageURLKey];
+    [encoder encodeObject:@(self.deliveryFee) forKey:kDeliveryFeeKey];
+    [encoder encodeObject:@(self.minimumDeliveryTime) forKey:kMinimumDeliveryTimeKey];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    if((self = [super init])) {
+        self.storeID = [[decoder decodeObjectForKey:kStoreIDKey] integerValue];
+        self.storeName = [decoder decodeObjectForKey:kStoreNameKey];
+        self.storeDescription = [decoder decodeObjectForKey:kStoreDescriptionKey];
+        self.storeImageURL = [decoder decodeObjectForKey:kStoreImageURLKey];
+        self.deliveryFee = [[decoder decodeObjectForKey:kDeliveryFeeKey] floatValue];
+        self.minimumDeliveryTime = [[decoder decodeObjectForKey:kMinimumDeliveryTimeKey] floatValue];
+        self.imageDownloadCompletionBlocks = [NSMutableArray arrayWithCapacity:0];
+        self.storeMenusDownloadCompletionBlocks = [NSMutableArray arrayWithCapacity:0];
+    }
+    return self;
+}
+
 - (void)getStoreImageWithCompletion:(DDStoreImageDownloadedCompletionBlock)completion {
     if (self.isDownloadingImage == YES) {
         [self.imageDownloadCompletionBlocks addObject:completion];
@@ -92,7 +116,7 @@
         [self.storeMenusDownloadCompletionBlocks addObject:completionBlock];
     } else {
         if (self.storeMenus == nil) {
-            [self.imageDownloadCompletionBlocks addObject:completionBlock];
+            [self.storeMenusDownloadCompletionBlocks addObject:completionBlock];
             self.isDownloadingStoreMenus = YES;
             NSInteger restaurantID = self.storeID;
             __weak typeof(self)weakSelf = self;
@@ -103,6 +127,7 @@
                 [restaurantMenuSearch
                  findRestaurantMenuForRestaurantWithID:restaurantID
                  success:^(NSArray *restaurantMenus) {
+                     strongWeakSelf.isDownloadingStoreMenus = NO;
                      strongWeakSelf.storeMenus = restaurantMenus;
                      
                      [strongWeakSelf updateCompletionBlocksForDownloadedStoreMenusWithError:nil];

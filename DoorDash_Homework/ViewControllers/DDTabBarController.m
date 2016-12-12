@@ -63,12 +63,13 @@
 
 #pragma mark - DDChooseAddressViewControllerProtocol conformance
 - (void)didTapConfirmAddressButtonForAddress:(CLLocationCoordinate2D)address {
-    NSInteger selectedTab = self.selectedIndex;
-    DDExploreTableViewController *exploreTableViewController = [[self.viewControllers[selectedTab] viewControllers] firstObject]; //embedded inside a navigation controller
-    if (exploreTableViewController) {
-        [exploreTableViewController updateControllerForLatitude:address.latitude
-                                                      longitude:address.longitude];
-    }
+    UINavigationController *navigationController = self.viewControllers[0];
+    [navigationController popToRootViewControllerAnimated:NO];
+    DDExploreTableViewController *exploreTableViewController = [[navigationController viewControllers] firstObject]; //embedded inside a navigation controller
+    [exploreTableViewController updateControllerForLatitude:address.latitude
+                                                  longitude:address.longitude];
+    
+    [self setSelectedIndex:0];
     
     [self dismissViewControllerAnimated:YES
                              completion:nil];
